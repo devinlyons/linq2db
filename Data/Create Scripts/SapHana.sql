@@ -391,7 +391,8 @@ CREATE COLUMN TABLE "Parent" (
 
 CREATE COLUMN TABLE "Child" (
 	"ParentID" INTEGER,
-	"ChildID" INTEGER
+	"ChildID" INTEGER,
+	"IsActive" TINYINT
 );;
 
 CREATE COLUMN TABLE "GrandChild" (

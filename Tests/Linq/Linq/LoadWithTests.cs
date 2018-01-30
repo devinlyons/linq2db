@@ -248,5 +248,26 @@ namespace Tests.Linq
 				}
 			}
 		}
+
+		[Test, DataContextSource]
+		public void LoadWith12(string context)
+		{
+			LinqToDB.Common.Configuration.Linq.AllowMultipleQuery = true;
+
+			using (var db = GetDataContext(context))
+			{
+				var q =
+					from t in db.Parent
+						.LoadWith(p => p.Children)
+						.LoadWith(p => p.ActiveChildren)
+					select t;
+
+				var count = q
+					.ToList()
+					.Count(pa => pa.Children.Count != pa.ActiveChildren.Count);
+					
+				Assert.AreEqual(4, count);
+			}
+		}
 	}
 }

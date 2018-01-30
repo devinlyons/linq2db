@@ -546,7 +546,7 @@ GO
 
 CREATE TABLE Parent      (ParentID int, Value1 int, _ID INT IDENTITY PRIMARY KEY)
 GO
-CREATE TABLE Child       (ParentID int, ChildID int, _ID INT IDENTITY PRIMARY KEY)
+CREATE TABLE Child       (ParentID int, ChildID int, IsActive bit, _ID INT IDENTITY PRIMARY KEY)
 GO
 CREATE TABLE GrandChild  (ParentID int, ChildID int, GrandChildID int, _ID INT IDENTITY PRIMARY KEY)
 GO

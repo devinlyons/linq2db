@@ -213,7 +213,7 @@ DROP TABLE Child      COMMIT;
 DROP TABLE GrandChild COMMIT;
 
 CREATE TABLE Parent      (ParentID int, Value1 int)                    COMMIT;
-CREATE TABLE Child       (ParentID int, ChildID int)                   COMMIT;
+CREATE TABLE Child       (ParentID int, ChildID int, IsActive char(1)) COMMIT;
 CREATE TABLE GrandChild  (ParentID int, ChildID int, GrandChildID int) COMMIT;
 
 

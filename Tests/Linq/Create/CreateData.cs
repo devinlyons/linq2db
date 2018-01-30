@@ -137,22 +137,22 @@ namespace Tests._Create
 					new []
 					{
 						new Child { ParentID = 1, ChildID = 11 },
-						new Child { ParentID = 2, ChildID = 21 },
+						new Child { ParentID = 2, ChildID = 21, IsActive = true },
 						new Child { ParentID = 2, ChildID = 22 },
-						new Child { ParentID = 3, ChildID = 31 },
-						new Child { ParentID = 3, ChildID = 32 },
+						new Child { ParentID = 3, ChildID = 31, IsActive = true },
+						new Child { ParentID = 3, ChildID = 32, IsActive = true },
 						new Child { ParentID = 3, ChildID = 33 },
 						new Child { ParentID = 4, ChildID = 41 },
 						new Child { ParentID = 4, ChildID = 42 },
-						new Child { ParentID = 4, ChildID = 43 },
-						new Child { ParentID = 4, ChildID = 44 },
+						new Child { ParentID = 4, ChildID = 43, IsActive = true },
+						new Child { ParentID = 4, ChildID = 44, IsActive = true },
 						new Child { ParentID = 6, ChildID = 61 },
 						new Child { ParentID = 6, ChildID = 62 },
-						new Child { ParentID = 6, ChildID = 63 },
-						new Child { ParentID = 6, ChildID = 64 },
-						new Child { ParentID = 6, ChildID = 65 },
-						new Child { ParentID = 6, ChildID = 66 },
-						new Child { ParentID = 7, ChildID = 77 }
+						new Child { ParentID = 6, ChildID = 63, IsActive = true },
+						new Child { ParentID = 6, ChildID = 64, IsActive = true },
+						new Child { ParentID = 6, ChildID = 65, IsActive = true },
+						new Child { ParentID = 6, ChildID = 66, IsActive = true },
+						new Child { ParentID = 7, ChildID = 77, IsActive = true }
 					});
 
 				Console.WriteLine("\nBulkCopy GrandChild\n");

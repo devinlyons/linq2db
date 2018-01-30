@@ -30,6 +30,11 @@ namespace Tests.Model
 		[Association(ThisKey = "ParentID", OtherKey = "ParentID")]
 		public List<Child> Children;
 
+		[Association(ThisKey = "ParentID", OtherKey = "ParentID", ExpressionPredicate = nameof(Parent.ActiveChildrenPredicate))]
+		public List<Child> ActiveChildren;
+
+		public static Expression<Func<Parent, Child, bool>> ActiveChildrenPredicate => (p, c) => c.IsActive;
+
 		[Association(ThisKey = "ParentID", OtherKey = "ParentID")]
 		public List<GrandChild> GrandChildren;
 
@@ -136,6 +141,9 @@ namespace Tests.Model
 
 		[Association(ThisKey = "ParentID, ChildID", OtherKey = "ParentID, ChildID")]
 		public GrandChild[] GrandChildren2;
+
+		[Column]
+		public bool IsActive { get; set; }
 
 		public override bool Equals(object obj)
 		{

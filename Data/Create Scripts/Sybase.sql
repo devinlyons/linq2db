@@ -86,7 +86,7 @@ GO
 
 CREATE TABLE Parent      (ParentID int, Value1 int NULL)
 GO
-CREATE TABLE Child       (ParentID int, ChildID int)
+CREATE TABLE Child       (ParentID int, ChildID int, IsActive bit default(0))
 GO
 CREATE TABLE GrandChild  (ParentID int, ChildID int, GrandChildID int)
 GO
